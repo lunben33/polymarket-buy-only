@@ -1,4 +1,19 @@
+# Core
 web3==6.15.1
 py-clob-client>=0.13.0
-requests
-python-dotenv
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Web3 生态依赖（避免安装失败）
+eth-account>=0.9.0
+hexbytes>=0.3.0
+lru-dict>=1.2.0
+eth-abi>=4.0.0
+eth-utils>=2.0.0
+eth-typing>=3.0.0
+
+# 可选：更稳定的 RPC（推荐）
+websockets>=12.0
+
+# 可选：日志美化（可选）
+colorama>=0.4.6  # Windows 彩色日志
