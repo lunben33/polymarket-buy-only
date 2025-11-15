@@ -17,7 +17,6 @@ from datetime import datetime, timezone, timedelta
 from web3 import Web3
 from py_clob_client.client import ClobClient
 from py_clob_client.clob_types import OrderArgs, ApiCreds
-from py_clob_client.constants import BUY
 from dotenv import load_dotenv
 import logging
 
@@ -155,7 +154,7 @@ def buy(token_id, outcome, ask, market):
         return
 
     try:
-        order = client.create_order(OrderArgs(token_id, price, FIXED_SHARES, BUY))
+        order = client.create_order(OrderArgs(token_id, price, FIXED_SHARES, "BUY"))
         resp = client.post_order(order)
         bought.add(token_id)
         positions[token_id] = {
